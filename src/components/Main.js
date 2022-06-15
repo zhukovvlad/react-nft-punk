@@ -4,6 +4,8 @@ import instagramLogo from '../assets/owner/instagram.png';
 import twitterLogo from '../assets/owner/twitter.png';
 import moreIcon from '../assets/owner/more.png';
 
+import './Main.css';
+
 const Main = ({ activePunk }) => {
   return (
     <div className='main'>
