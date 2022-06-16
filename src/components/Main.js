@@ -22,7 +22,7 @@ const Main = ({ activePunk }) => {
                 </div>
             </div>
 
-            <div className='punkDetails'>
+            <div className='punkDetails' style={{ color: '#fff' }}>
                 <div className='title'>
                     Bandana Punk
                 </div>
@@ -40,7 +40,7 @@ const Main = ({ activePunk }) => {
                 </div>
                 <div className='ownerDetails'>
                     <div className='ownerNameAndHandle'>
-                        <div>0xdd6c8baf81f19970b5960bd09517729426075b71</div>
+                        <div className='ownerContract'>0xdd6c8baf81f19970b5960bd09517729426075b71</div>
                         <div className='ownerHandle'>@zhukovvlad</div>
                     </div>
                     <div className='ownerLink'>
