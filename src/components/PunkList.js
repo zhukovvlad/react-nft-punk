@@ -4,21 +4,14 @@ import CollectionCard from './CollectionCard';
 import './PunkList.css';
 
 const PunkList = ({ punks, setSelectedPunk }) => {
-  return (
-    <div className='punkList'>
-        {punks.map(punk => (
-            <div onClick={() => setSelectedPunk(punk.token_id)}>
-                <CollectionCard
-                    key={punk.token_id}
-                    id={punk.token_id}
-                    name={punk.name}
-                    traits={punk.traits}
-                    image={punk.image_original_url}
-                />
-            </div>
-        ))}
-    </div>
-  );
+  const renderedPunks = punks.map((punk) => {
+    return <CollectionCard
+            key={punk.token_id}
+            punk={punk}
+            setSelectedPunk={setSelectedPunk}
+    />
+  });
+  return <div className='punkList'>{renderedPunks}</div>
 };
 
 export default PunkList;
