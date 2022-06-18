@@ -6,14 +6,11 @@ import moreIcon from '../assets/owner/more.png';
 
 import './Main.css';
 
-const Main = ({ selectedPunk, punkListData }) => {
-    const [activePunk, setActivePunk] = useState(punkListData[0]);
-
-    useEffect(() => {
-        setActivePunk(punkListData[selectedPunk]);
-    }, [punkListData, selectedPunk]);
+const Main = ({ selectedPunk }) => {
+    if (!selectedPunk) {
+        return <div>Loading...</div>
+    }
     
-
     return (
       <div className='main'>
           <div className='mainContent'>
@@ -21,16 +18,14 @@ const Main = ({ selectedPunk, punkListData }) => {
                   <div className='punkContainer'>
                       <img
                           className='selectedPunk'
-                          src={
-                              'https://lh3.googleusercontent.com/9B1oTFEv4DeaW9gFwnd1ION2NzfGnC9lHfjnPNSbNkDZmID0P7Di6Y6ptZxZuf0oaWgnAKLu1eqEbdlCJSpHDFUceo2D7H9c0wK56Q=s0'
-                          }
+                          src={selectedPunk.image_original_url}
                           alt=''
                       />
                   </div>
               </div>    
               <div className='punkDetails' style={{ color: '#fff' }}>
                   <div className='title'>
-                      Bandana Punk
+                      Bandana
                   </div>
                   <span className='itemNumber'>•#3</span>
               </div>    
