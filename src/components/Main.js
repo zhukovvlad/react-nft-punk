@@ -8,7 +8,7 @@ import './Main.css';
 
 const Main = ({ selectedPunk }) => {
     if (!selectedPunk) {
-        return <div>Loading...</div>
+        return <div>Loading punks...</div>
     }
     
     return (
